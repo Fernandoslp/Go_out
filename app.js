@@ -23,6 +23,7 @@ for (let dado of dados) {
         
     resultados +=`
             <div class="item-resultado">
+                <img src="${dado.imagem}" alt= "imagem do local" class="imagem">
                 <h2><a href="#" target="_blank">${dado.titulo}</a></h2>
                 <p class="descricao-meta">${dado.descricao}</p>
                 <a href=${dado.link} target="_blank">Mais informações</a>
