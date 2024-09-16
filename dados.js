@@ -2,7 +2,7 @@ let dados= [
     {
         titulo : "Varandeck",
         descricao : "Endereço:Rua Irineu Bonardi, 173 - Vila Pedroso, São Paulo - SP, 08011-180",
-        link: "https://www.instagram.com/varandeck?igsh=MzNtMGdpZTVydTU2"
+        link: "https://www.instagram.com/varandeck/"
      },
      {
         titulo : "Nakka Bar",
