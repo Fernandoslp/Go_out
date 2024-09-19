@@ -62,7 +62,7 @@ section button:hover {
 /* Estiliza a caixa de resultados da pesquisa */
 .resultados-pesquisa {
     width: 60rem; /* Largura máxima da caixa de resultados */
-    height: 46vh; /* Altura máxima da caixa de resultados */
+    height: 40vh; /* Altura máxima da caixa de resultados */
     overflow-y: auto; /* Adiciona rolagem vertical se necessário */
     margin-top: 1rem; /* Espaçamento acima da caixa de resultados */
     padding: 1rem; /* Espaçamento interno */
@@ -167,7 +167,7 @@ footer {
 
 .imagem {
     border: 4px solid black;
-    max-width: 70%;
+    max-width: 65%;
     max-height: 50%;
     object-fit: contain;
 }
