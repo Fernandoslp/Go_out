@@ -1,7 +1,10 @@
-console.log(dados[2]);
+
 
 function pesquisar() {
     let section = document.getElementById("resultados-pesquisa")
+  
+    
+    
 
 let campoPesquisa = document.getElementById("campo-pesquisa").value
 if(campoPesquisa ==""){
@@ -19,7 +22,8 @@ console.log(campoPesquisa);
 for (let dado of dados) {
     titulo =  dado.titulo.toLowerCase()
     descricao =  dado.descricao.toLowerCase()
-    if (titulo.includes(campoPesquisa) || descricao.includes(campoPesquisa)){
+    
+    if (titulo.includes(campoPesquisa) || descricao.includes(campoPesquisa) ){
         
     resultados +=`
             <div class="item-resultado">
@@ -28,6 +32,7 @@ for (let dado of dados) {
                 <p class="descricao-meta">${dado.descricao}</p>
                 <p class="descricao-meta">${dado.local}</p>
                 <a href=${dado.link} target="_blank">Mais informações</a>
+                <p>${dado.tags}</p>
             </div>`
     }
     
@@ -35,29 +40,32 @@ for (let dado of dados) {
 
 section.innerHTML = resultados
 
-
 }
-// funcionalidade das tags
 
-const resultados = [
-    { id: 1, nome: 'varandeck', tags: ['tag1', 'tag2'] },
-    { id: 2, nome: 'nakka', tags: ['tag2', 'tag3'] },
-    { id: 3, nome: 'Resultado 3', tags: ['tag1', 'tag3'] },
-    // Adicione mais resultados conforme necessário
-];
+// função das tags
+const tags = document.querySelectorAll('.tags input[type="checkbox"]');
+const resultados = document.getElementById('resultados');
 
-function filtrarResultados() {
-    const inputTags = document.getElementById('tags').value.split(',').map(tag => tag.trim());
-    const resultadosFiltrados = resultados.filter(resultado => 
-        resultado.tags.some(tag => inputTags.includes(tag))
-    );
 
-    const divResultados = document.getElementById('resultados');
-    divResultados.innerHTML = '';
 
-    resultadosFiltrados.forEach(resultado => {
+function filtrarDados() {
+    const tagsSelecionadas = Array.from(tags)
+        .filter(tag => tag.checked)
+        .map(tag => tag.value);
+
+    const resultadosFiltrados = dados.filter(dado => {
+        return tagsSelecionadas.every(tag => dado.tags.includes(tag));
+    });
+
+    resultados.innerHTML = '';
+    resultadosFiltrados.forEach(dado => {
         const div = document.createElement('div');
-        div.textContent = `${resultado.nome} (Tags: ${resultado.tags.join(', ')})`;
-        divResultados.appendChild(div);
+        div.classList.add('resultado');
+        div.textContent = dado.titulo;
+        resultados.appendChild(div);
     });
 }
+
+tags.forEach(tag => {
+    tag.addEventListener('change', filtrarDados);
+});

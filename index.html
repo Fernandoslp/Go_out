@@ -11,10 +11,25 @@
         <h1>Go out</h1>
     </header>
     <main></main>
-        <section>
-            <input type="text" placeholder="digite o nome do atleta" id="campo-pesquisa">
-            <button onclick="pesquisar()">Pesquisar</button>
+        <section> 
+            <input type="text"  placeholder="digite o nome do local" id="campo-pesquisa">
+            <button onclick="pesquisar()">Pesquisar</button> 
+            
         </section>
+        <div> 
+            
+            
+        </div>
+        <div class="tags">
+            <label><input type="checkbox" value="Lounge Bar"> Lounge Bar</label>
+            <label><input type="checkbox" value="área externa"> área externa</label>
+            <label><input type="checkbox" value="Entrada paga"> Entrada paga</label>
+            <label><input type="checkbox" value="Entrada gratis"> Entrada gratis</label>
+        </div>
+    
+        <div id="resultados">
+            Resultados serão exibidos aqui 
+        </div> 
         <section class="resultados-pesquisa" id="resultados-pesquisa">
            
         </section>
@@ -24,14 +39,8 @@
         <p>entre em contato pelo e-mail fakenattysou@gmail.com</p>
     </footer>
 
-     <div>
-        <label for="tags">Selecione as tags:</label>
-        <input type="text" id="tags" placeholder="Digite as tags separadas por vírgula">
-        <button onclick="filtrarResultados()">Filtrar</button>
-    </div>
-    <div id="resultados">
-         Resultados serão exibidos aqui 
-    </div> 
+     
+    
     
 <script src="dados.js" ></script>
 <script src="app.js" ></script>

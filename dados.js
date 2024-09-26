@@ -5,7 +5,8 @@ let dados= [
         local:"Endereço:Rua Irineu Bonardi, 173 - Vila Pedroso, São Paulo - SP, 08011-180",
         link: "https://www.instagram.com/varandeck/",
         imagem:"imagens/ftvarandeck.png",
-        tags: ['Lounge Bar']
+        tags: ['Lounge Bar', 'área externa', 'Entrada paga'],
+        id: 1
      },
      {
         titulo : "Nakka Bar",
@@ -13,7 +14,8 @@ let dados= [
         local:"Endereço:Rua Vilma, 51 - São Miguel Paulista, São Paulo - SP, 08060-090",
         link: "https://www.instagram.com/nakkabar?igsh=MWNwY2N2dzVmb2Jjdg==",
         imagem:"imagens/ftnakkabar.png",
-        tags: ['Lounge Bar']
+        tags: ['Lounge Bar', 'Entrada paga','área externa'],
+        id: 2
      },
      {
         titulo : "Itaquera beach bar",
@@ -21,7 +23,8 @@ let dados= [
         local:"Endereço:Rua São Teodoro, 193 - Itaquera, São Paulo - SP, 08290-005",
         link: "https://www.instagram.com/itaquerabeachbar?igsh=MWx3bHRwemxkZjB2Nw==",
         imagem: "",
-        tags: ['Lounge Bar']
+        tags: ['Lounge Bar', 'área externa'],
+        id: 3
      },
      {
         titulo : "Amém lounge Store",
@@ -29,7 +32,8 @@ let dados= [
         local:"Endereço:Rua Francisco Alarico Bérgamo, 80 - Vila Taquari, São Paulo - SP, 08230-010",
         link: "https://www.instagram.com/amemloungestore?igsh=MWFseGxyNHU3Zzhlaw==",
         imagem:"imagens/ftamem.png",
-        tags: ['Lounge Bar']
+        tags: ['Lounge Bar','Entrada paga'],
+        id: 4
      },
      {
       titulo : "Nakka Club",
@@ -37,7 +41,8 @@ let dados= [
       local:"Endereço:Av. Amador Bueno da Veiga, 751 - Vila Lais, São Paulo - SP, 03635-000",
       link: "https://www.instagram.com/nakkaclub/p/CzJkp9WrtzD",
       imagem: "imagens/ftnakkaclub.png",
-      tags: ['Lounge Bar']
+      tags: ['Lounge Bar', 'Entrada paga'],
+      id: 5
    },
    {
       titulo : "Bar Pitangueira",
@@ -45,7 +50,17 @@ let dados= [
       local:"Endereço:R. Siqueira Campos, 252 - Centro de Guarulhos, Guarulhos - SP, 07110-110",
       link: "https://www.instagram.com/barpitangueira",
       imagem: "imagens/ftbarpitangueira.jpg",
-      tags: ['Lounge Bar']
+      tags: ['Lounge Bar','Entrada paga'],
+      id: 6
+   },
+   {
+      titulo : "Bar do Juiz",
+      descricao : "Local com parte interna e externa com bastante espaço com show de famosos frequentemente ",
+      local:"Endereço:Av. Antonio Estevão de Carvalho 2100, São Paulo, SP, 03540-200",
+      link: "https://www.instagram.com/bardojuiz",
+      imagem: "",
+      tags: ['Lounge Bar','Entrada paga'],
+      id: 7
    }
 
  ];
