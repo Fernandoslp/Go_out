@@ -177,10 +177,13 @@ footer {
     margin-right: 5px;
 }
 
-.resultado {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 10px;
+.resultados {
+    width: 60rem; /* Largura máxima da caixa de resultados */
+    height: 40vh; /* Altura máxima da caixa de resultados */
+    overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+    margin-top: 1rem; /* Espaçamento acima da caixa de resultados */
+    padding: 1rem; /* Espaçamento interno */
+    border-radius: 0.6rem; /* Borda arredondada */
 }
 
 .tags {
