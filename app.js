@@ -6,7 +6,7 @@ function pesquisar() {
     
 let campoPesquisa = document.getElementById("campo-pesquisa").value
 if(campoPesquisa ==""){
-    section.innerHTML = "<p>Nada foi encontrado</p>"
+    section.innerHTML = "<p>Nada encontrado</p>"
     return
 }
 campoPesquisa =  campoPesquisa.toLowerCase()
@@ -42,7 +42,7 @@ section.innerHTML = resultados
 
 // função das tags
 const tags = document.querySelectorAll('.tags input[type="checkbox"]');
-const resultados = document.getElementById('resultados-pesquisa');
+const resultados = document.getElementById('resultados-pesquisa1');
 
 
 
@@ -58,7 +58,7 @@ function filtrarDados() {
     resultados.innerHTML = '';
     resultadosFiltrados.forEach(dado => {
         const div = document.createElement('div');
-        div.classList.add('resultados-pesquisa');
+        div.classList.add('resultados-pesquisa1');
         div.innerHTML = `
         <div class="item-resultado">
             <img src="${dado.imagem}" alt= "imagem do local" class="imagem">

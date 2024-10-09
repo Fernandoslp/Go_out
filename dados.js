@@ -19,10 +19,10 @@ let dados= [
      },
      {
         titulo : "Itaquera beach bar",
-        descricao : "Local bem arejado, tem a opção de poder usar as quadras para esportes com areia,",
+        descricao : "Local bem arejado, tem a opção de poder usar as quadras para esportes com areia",
         local:"Endereço:Rua São Teodoro, 193 - Itaquera, São Paulo - SP, 08290-005",
         link: "https://www.instagram.com/itaquerabeachbar?igsh=MWx3bHRwemxkZjB2Nw==",
-        imagem: "",
+        imagem: "imagens/ftitaquerabeachbar.jpg",
         tags: ['Lounge Bar', 'área externa'],
         id: 3
      },
@@ -54,13 +54,22 @@ let dados= [
       id: 6
    },
    {
-      titulo : "Bar do Juiz",
-      descricao : "Local com parte interna e externa com bastante espaço com show de famosos frequentemente ",
+      titulo : "Bar do Juiz - Patriarca",
+      descricao : "Local com parte interna e externa com bastante espaço com show de famosos e sempre lotado",
       local:"Endereço:Av. Antonio Estevão de Carvalho 2100, São Paulo, SP, 03540-200",
       link: "https://www.instagram.com/bardojuiz",
-      imagem: "",
+      imagem: "imagens/ftbardojuizpatriarca.jpg",
       tags: ['Lounge Bar','Entrada paga'],
       id: 7
-   }
+   },
+   {
+      titulo : "Bar do Juiz - Imperador",
+      descricao : "Local com parte interna e externa com bastante espaço com show de famosos e variedade de drinks",
+      local:"Endereço:Rua José Garcia Terra 285, São Paulo, SP, 03675-000",
+      link: "https://www.instagram.com/bardojuiz",
+      imagem: "imagens/ftbardojuizimperador.jpg",
+      tags: ['Lounge Bar','Entrada paga'],
+      id: 8
+   },
 
  ];

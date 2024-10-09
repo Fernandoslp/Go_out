@@ -19,7 +19,7 @@ header {
 
 section{
     float: left; /* posição do lado esquerdo */
-    margin-left: 200px; /* espaçamento entre o lado esquerdo da tela */
+    margin-left: 300px; /* espaçamento entre o lado esquerdo da tela */
     padding: 15px; /* espaçamento entre os objetos */
     margin-top: 50px;/* espaçamento entre o topo da tela */
 }
@@ -27,6 +27,8 @@ section{
 .resultados-pesquisa{
     display: inline-table; /* alinhamento */
     margin-top: 100px;/* espaçamento entre o topo da tela */
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
 .botao {
@@ -48,22 +50,37 @@ section{
         transform: scale(0.95); /* Efeito de "pressionar" */
     }
     
-    .section {
-        display: flex;
-        border: 1px solid #ccc; /* Borda da barra */
-        border-radius: 25px; /* Bordas arredondadas */
-        overflow: hidden; /* Esconde bordas internas */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    }
+.section {
+    display: flex;
+    border: 1px solid #ccc; /* Borda da barra */
+    border-radius: 25px; /* Bordas arredondadas */
+    overflow: hidden; /* Esconde bordas internas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
 
-    .campo-pesquisa {
-        border: none; /* Remove a borda padrão */
-        padding: 10px 20px; /* Espaçamento interno */
-        font-size: 16px; /* Tamanho da fonte */
-        outline: none; /* Remove contorno ao focar */
-        flex: 1; /* Faz o campo ocupar o espaço disponível */
-    }
+#campo-pesquisa {
+    border: none; /* Remove a borda padrão */
+    padding: 12px 60px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    outline: none; /* Remove contorno ao focar */
+    flex: 1; /* Faz o campo ocupar o espaço disponível */
+    border-radius: 15px; /* arredonda as bordas */
+}
     
-    .campo-pesquisa::placeholder {
+    #campo-pesquisa::placeholder {
         color: #aaa; /* Cor do texto do placeholder */
     }
+
+.imagem {
+    width: 45vh;
+    height: 40vh;
+}
+    .imagem:hover {
+        transform: scale(1.2);
+        transition: transform 0.3s ease-in-out;
+    }
+
+.item-resultado {
+    border: 1px solid ;
+    padding: 10px;
+}
