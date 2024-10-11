@@ -71,5 +71,14 @@ let dados= [
       tags: ['Lounge Bar','Entrada paga'],
       id: 8
    },
+   {
+      titulo : "Drinkeria Lux",
+      descricao : "Local com parte interna e algumas mesas na calçada, drinks variados e projetor que passa o jogos de futebol geralmente",
+      local:"Endereço:R. Tiago Ferreira, 390 - Vila Pedroso, São Paulo - SP, 08011-270",
+      link: "https://www.instagram.com/drinkeria.lux",
+      imagem: "imagens/ftbardojuizimperador.jpg",
+      tags: ['Lounge Bar','Entrada gratis'],
+      id: 9
+   },
 
  ];
