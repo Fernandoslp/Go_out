@@ -93,7 +93,7 @@ let dados= [
    {
       titulo : "Prainha Lounge Bar",
       descricao : "Local com parte interna com bastante espaço e um leve canto externo, drinks variados e ótimos preços",
-      local:"Endereço:Av. São Miguel 5057 (Parque Boturussu), São Paulo, SP ",
+      local:"Endereço:R. Amorim Diniz, 200 - Vila Sao Geraldo, São Paulo - SP, 03730-040",
       link: "https://www.instagram.com/prainhaloungebar?igsh=djNsOHhhYTVuMWtn",
       imagem: "imagens/ftprainhaloungebar.jpg",
       tags: ['Lounge Bar','Entrada paga','mais baratos'],
@@ -106,7 +106,7 @@ let dados= [
       link: "https://www.instagram.com/doscriasbar?igsh=YzduMXB2NWpyc2Y1",
       imagem: "imagens/ftdoscriasbar.jpg",
       tags: ['Lounge Bar','Entrada gratis','mais baratos'],
-      id: 11
+      id: 12
    },
 
  ];

@@ -9,6 +9,7 @@ header {
     display: flex; /* Usa Flexbox para centralização */
     justify-content: center; /* Centraliza horizontalmente */
     align-items: flex-start; /* Alinha no topo */
+    
 }
 
 .tags {
@@ -16,6 +17,10 @@ header {
     margin-right: 200px; /* espaçamento entre o lado direito da tela */
     margin-top: 60px;/* espaçamento entre o topo da tela */
     align-items: flex-start; /* Alinha no topo */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    color: darkblue;
 }
 
 section{
@@ -84,4 +89,15 @@ section{
 .item-resultado {
     border: 1px solid ;
     padding: 10px;
+}
+
+.taglocal {
+    float: right; /* posição do lado direito */
+    margin-right: 200px; /* espaçamento entre o lado direito da tela */
+    margin-top: 20px;/* espaçamento entre o topo da tela */
+    align-items: flex-start; /* Alinha no topo */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    color: brown;
 }

@@ -41,7 +41,7 @@ section.innerHTML = resultados
 }
 
 // função das tags
-const tags = document.querySelectorAll('.tags input[type="checkbox"]');
+const tags = document.querySelectorAll('.tags input[type="checkbox"]', '.taglocal input[type="checkbox"]');
 const resultados = document.getElementById('resultados-pesquisa1');
 
 
