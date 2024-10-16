@@ -41,7 +41,7 @@ section.innerHTML = resultados
 }
 
 // função das tags
-const tags = document.querySelectorAll('.tags input[type="checkbox"]', '.taglocal input[type="checkbox"]');
+const tags = document.querySelectorAll('.tags input[type="checkbox"], .taglocal input[type="checkbox"]');
 const resultados = document.getElementById('resultados-pesquisa1');
 
 
@@ -50,6 +50,12 @@ function filtrarDados() {
     const tagsSelecionadas = Array.from(tags)
         .filter(tag => tag.checked)
         .map(tag => tag.value);
+    
+     // Limpa os resultados se não houver tags selecionadas
+     if (tagsSelecionadas.length === 0) {
+        resultados.innerHTML = ''; // Limpa os resultados
+        return; // Sai da função
+    }
 
     const resultadosFiltrados = dados.filter(dado => {
         return tagsSelecionadas.every(tag => dado.tags.includes(tag));

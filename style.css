@@ -21,6 +21,7 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 10px;
     color: darkblue;
+
 }
 
 section{
@@ -33,7 +34,7 @@ section{
 .resultados-pesquisa{
     display: inline-table; /* alinhamento */
     margin-top: 100px;/* espaçamento entre o topo da tela */
-    padding: 10px;
+    padding: 20px;
     margin-bottom: 10px;
 }
 
@@ -100,4 +101,8 @@ section{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 10px;
     color: brown;
+}
+
+#frase {
+    
 }
