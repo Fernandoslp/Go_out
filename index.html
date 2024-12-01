@@ -3,55 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Go out</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>Go out</h1>
     </header>
     <main>
-        <section> 
-            <input type="text"  placeholder="digite o nome do local" id="campo-pesquisa">
-            <button class="botao" onclick="pesquisar()">Pesquisar</button> 
-            
+        <section class="search-section">
+            <input type="text" id="campo-pesquisa" placeholder="Digite o nome do local">
+            <button class="btn-pesquisar">Pesquisar</button>
         </section>
-             <div id="frase">Defina os filtros desejados</div>
-
+        <nav class="filters">
             <div class="tags">
+                <h4>Categorias</h4>
                 <label><input type="checkbox" value="Lounge Bar"> Lounge Bar</label>
-                <label><input type="checkbox" value="Área externa"> área externa</label>
+                <label><input type="checkbox" value="Área externa"> Área externa</label>
                 <label><input type="checkbox" value="Entrada paga"> Entrada paga</label>
                 <label><input type="checkbox" value="Entrada gratis"> Entrada gratis</label>
-                <label><input type="checkbox" value="Mais baratos"> mais baratos</label>
-            </div>
-
-            <div class="taglocal">
-                <label><input type="checkbox" value="Sao miguel"> Sâo Miguel</label>
+                <label><input type="checkbox" value="Mais baratos"> Mais baratos</label>
+                <label><input type="checkbox" value="Boa culinária"> Boa culinária</label>
+                </div>
+            <div class="tags">
+                <h4>Localidades</h4>
+                <label><input type="checkbox" value="São Miguel"> São Miguel</label>
                 <label><input type="checkbox" value="Itaquera"> Itaquera</label>
                 <label><input type="checkbox" value="Guarulhos"> Guarulhos</label>
                 <label><input type="checkbox" value="Patriarca"> Patriarca</label>
                 <label><input type="checkbox" value="Parque Boturusso"> Parque Boturusso</label>
                 <label><input type="checkbox" value="Penha"> Penha</label>
-            </div>
-        
-        
-    <div class="resultados-pesquisa" id="resultados-pesquisa">
-        
-    </div> 
-    <div class="resultados-pesquisa1" id="resultados-pesquisa1">
-           
-    </div>
+                </div>
+        </nav>
+        <article class="results" id="resultados-pesquisa">
+            </article>
     </main>
-    <!--<footer>
-        <p>2024 - Go out. Todos os direitos reservados</p>
-        <p>entre em contato pelo e-mail fakenattysou@gmail.com</p>
-    </footer>-->
-
-     
-    
-    
-<script src="dados.js" ></script>
-<script src="app.js" ></script>
+    <script src="dados.js" ></script>
+    <script src="app.js" ></script>
 </body>
 </html>

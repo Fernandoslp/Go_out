@@ -5,7 +5,7 @@ let dados= [
         local:"Endereço:Rua Irineu Bonardi, 173 - Vila Pedroso, São Paulo - SP, 08011-180",
         link: "https://www.instagram.com/varandeck/",
         imagem:"imagens/ftvarandeck.png",
-        tags: ['Lounge Bar', 'Área externa', 'Entrada paga','Mais baratos','Sao miguel'],
+        tags: ['Lounge Bar', 'Área externa', 'Entrada paga','Mais baratos','São Miguel'],
         id: 1
      },
      {
@@ -14,7 +14,7 @@ let dados= [
         local:"Endereço:Rua Vilma, 51 - São Miguel Paulista, São Paulo - SP, 08060-090",
         link: "https://www.instagram.com/nakkabar?igsh=MWNwY2N2dzVmb2Jjdg==",
         imagem:"imagens/ftnakkabar.png",
-        tags: ['Lounge Bar', 'Entrada paga','Área externa','Sao miguel'],
+        tags: ['Lounge Bar', 'Entrada paga','Área externa','São Miguel'],
         id: 2
      },
      {
@@ -77,7 +77,7 @@ let dados= [
       local:"Endereço:R. Tiago Ferreira, 390 - Vila Pedroso, São Paulo - SP, 08011-270",
       link: "https://www.instagram.com/drinkeria.lux",
       imagem: "imagens/ftdrinkerialux.jpg",
-      tags: ['Lounge Bar','Entrada gratis','Sao miguel'],
+      tags: ['Lounge Bar','Entrada gratis','São Miguel'],
       id: 9
    },
    {
@@ -105,8 +105,17 @@ let dados= [
       local:"Endereço:R. Vilma, 145 - Vila Jacuí, São Paulo - SP, 08060-090 ",
       link: "https://www.instagram.com/doscriasbar?igsh=YzduMXB2NWpyc2Y1",
       imagem: "imagens/ftdoscriasbar.jpg",
-      tags: ['Lounge Bar','Entrada gratis','Mais baratos','Sao miguel'],
+      tags: ['Lounge Bar','Entrada gratis','Mais baratos','São Miguel'],
       id: 12
+   },
+   {
+      titulo : "Celestino Gastrobar",
+      descricao : "Local agradável com ótima comida e drinks muito bons, ótimo ambiente e música",
+      local:"R. Francisco Rodrigues Seckler, 300 - Vila Taquari, São Paulo - SP, 08230-020",
+      link: "https://www.instagram.com/celestino.gastrobar?igsh=eHMwMXF0cnZoanMw",
+      imagem: "imagens/ftcelestino.jpeg",
+      tags: ['Lounge Bar','Entrada gratis','itaquera','Boa culinária'],
+      id: 13
    },
 
  ];

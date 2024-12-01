@@ -1,44 +1,40 @@
 body {
-    margin: 20px; /* espaçamento entre os cants da tela */
-    background-color: #DDDDDD; /* Cor do fundo */
-    height: 100vh; /* Faz o corpo ocupar toda a altura da tela */
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
-    margin-top: 20px; /* espaçamento entre o topo da tela */
-    display: flex; /* Usa Flexbox para centralização */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: flex-start; /* Alinha no topo */
-    
+    text-align: center;
+    padding: 10px;
 }
 
 .tags {
     float: right; /* posição do lado direito */
     margin-right: 200px; /* espaçamento entre o lado direito da tela */
-    margin-top: 60px;/* espaçamento entre o topo da tela */
+    margin-top: 20px;/* espaçamento entre o topo da tela */
     align-items: flex-start; /* Alinha no topo */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 10px;
     color: darkblue;
-
+    
 }
 
 section{
     float: left; /* posição do lado esquerdo */
     margin-left: 300px; /* espaçamento entre o lado esquerdo da tela */
     padding: 15px; /* espaçamento entre os objetos */
-    margin-top: 50px;/* espaçamento entre o topo da tela */
+    margin-top: 10px;/* espaçamento entre o topo da tela */
 }
 
-.resultados-pesquisa{
-    display: inline-table; /* alinhamento */
-    margin-top: 100px;/* espaçamento entre o topo da tela */
-    padding: 20px;
-    margin-bottom: 10px;
+.results{
+    margin-top: 350px;/* espaçamento entre o topo da tela */
 }
 
-.botao {
+.btn-pesquisar {
     padding: 10px 15px; /* Espaçamento interno */
     font-size: 12px; /* Tamanho da fonte */
     color: #fff; /* Cor do texto */
@@ -49,11 +45,11 @@ section{
     cursor: pointer; /* Muda o cursor ao passar por cima */
     transition: background-color 0.3s, transform 0.2s; /* Transições suaves */
 }
-    .botao:hover {
+    .btn-pesquisar:hover {
         background-color: #0056b3; /* Cor de fundo ao passar o mouse */
     }
 
-    .botao:active {
+    .btn-pesquisar:active {
         transform: scale(0.95); /* Efeito de "pressionar" */
     }
     
@@ -65,13 +61,23 @@ section{
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
+.search-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
 #campo-pesquisa {
-    border: none; /* Remove a borda padrão */
     padding: 12px 60px; /* Espaçamento interno */
     font-size: 16px; /* Tamanho da fonte */
     outline: none; /* Remove contorno ao focar */
     flex: 1; /* Faz o campo ocupar o espaço disponível */
     border-radius: 15px; /* arredonda as bordas */
+    display: flex;
+    border: 1px solid #ccc; /* Borda da barra */
+    
+    overflow: hidden; /* Esconde bordas internas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
     
     #campo-pesquisa::placeholder {
@@ -103,6 +109,12 @@ section{
     color: brown;
 }
 
-#frase {
-    
-}
+@media (max-width: 768px) {
+    .search-bar {
+      flex-direction: column;
+    }
+  
+    .filters {
+      flex-direction: column;
+    }
+  }

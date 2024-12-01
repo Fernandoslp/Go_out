@@ -1,83 +1,44 @@
 
-
-function pesquisar() {
-    let section = document.getElementById("resultados-pesquisa")
+function pesquisarEFiltrar() {
+    const termoPesquisa = document.getElementById("campo-pesquisa").value.toLowerCase();
+    const tagsSelecionadas = Array.from(document.querySelectorAll('.tags input[type="checkbox"]:checked'))
+      .map(tag => tag.value);
   
-    
-let campoPesquisa = document.getElementById("campo-pesquisa").value
-if(campoPesquisa ==""){
-    section.innerHTML = "<p>Nada encontrado</p>"
-    return
-}
-campoPesquisa =  campoPesquisa.toLowerCase()
-let resultados = "";
-let titulo = "";
-let descricao = "";
-
-
-console.log(campoPesquisa);
-
-for (let dado of dados) {
-    titulo =  dado.titulo.toLowerCase()
-    descricao =  dado.descricao.toLowerCase()
-    
-    if (titulo.includes(campoPesquisa) || descricao.includes(campoPesquisa) ){
-        
-    resultados +=`
-            <div class="item-resultado">
-                <img src="${dado.imagem}" alt= "imagem do local" class="imagem">
-                <h2><a href="#" target="_blank">${dado.titulo}</a></h2>
-                <p class="descricao-meta">${dado.descricao}</p>
-                <p class="descricao-meta">${dado.local}</p>
-                <a href=${dado.link} target="_blank">Mais informações</a>
-                <p>${dado.tags}</p>
-            </div>`
-    }
-    
-}
-
-section.innerHTML = resultados
-
-}
-
-// função das tags
-const tags = document.querySelectorAll('.tags input[type="checkbox"], .taglocal input[type="checkbox"]');
-const resultados = document.getElementById('resultados-pesquisa1');
-
-
-
-function filtrarDados() {
-    const tagsSelecionadas = Array.from(tags)
-        .filter(tag => tag.checked)
-        .map(tag => tag.value);
-    
-     // Limpa os resultados se não houver tags selecionadas
-     if (tagsSelecionadas.length === 0) {
-        resultados.innerHTML = ''; // Limpa os resultados
-        return; // Sai da função
-    }
-
     const resultadosFiltrados = dados.filter(dado => {
-        return tagsSelecionadas.every(tag => dado.tags.includes(tag));
+      const tituloMinusculo = dado.titulo.toLowerCase();
+      const descricaoMinuscula = dado.descricao.toLowerCase();
+      return tagsSelecionadas.every(tag => dado.tags.includes(tag)) &&
+             (tituloMinusculo.includes(termoPesquisa) || descricaoMinuscula.includes(termoPesquisa));
     });
-
-    resultados.innerHTML = '';
-    resultadosFiltrados.forEach(dado => {
-        const div = document.createElement('div');
-        div.classList.add('resultados-pesquisa1');
-        div.innerHTML = `
-        <div class="item-resultado">
+  
+    const resultadosElement = document.getElementById("resultados-pesquisa");
+  
+    if (resultadosFiltrados.length === 0) {
+      resultadosElement.innerHTML = "<p>Nenhum resultado encontrado.</p>";
+    } else {
+      let html = "";
+      resultadosFiltrados.forEach(dado => {
+        const regex = new RegExp(termoPesquisa, 'gi');
+        html += `
+          <div class="item-resultado">
             <img src="${dado.imagem}" alt= "imagem do local" class="imagem">
-            <h2 class="titulo">${dado.titulo}</h2>
-            <p class="descricao-meta">${dado.descricao}</p>
-            <p class="descricao-meta">${dado.local || 'Autor não informado'}</p>
-            <a href=${dado.link} target="_blank">Mais informações</a>
+            <h2><a href="#" target="_blank">${dado.titulo.replace(regex, '<b>$&</b>')}</a></h2>
+            <p class="descricao-meta">${dado.descricao.replace(regex, '<b>$&</b>')}</p>
+            <p class="descricao-meta">${dado.local}</p>
+            <a href=${dado.link || 'Rede social não encontrada'} target="_blank">Mais informações</a>
             <p>${dado.tags}</p>
-        </div>`;
-        resultados.appendChild(div);
-    });
-}
-
-tags.forEach(tag => {
-    tag.addEventListener('change', filtrarDados);
-});
+            </div>
+        `;
+      });
+      resultadosElement.innerHTML = html;
+    }
+  }
+  
+  // Adicionar event listeners para o campo de pesquisa e as checkboxes
+  const campoPesquisaElement = document.getElementById('campo-pesquisa');
+  campoPesquisaElement.addEventListener('input', pesquisarEFiltrar);
+  
+  const tags = document.querySelectorAll('.tags input[type="checkbox"]');
+  tags.forEach(tag => {
+    tag.addEventListener('change', pesquisarEFiltrar);
+  });
