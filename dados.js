@@ -114,7 +114,7 @@ let dados= [
       local:"R. Francisco Rodrigues Seckler, 300 - Vila Taquari, São Paulo - SP, 08230-020",
       link: "https://www.instagram.com/celestino.gastrobar?igsh=eHMwMXF0cnZoanMw",
       imagem: "imagens/ftcelestino.jpeg",
-      tags: ['Lounge Bar','Entrada gratis','itaquera','Boa culinária'],
+      tags: ['Lounge Bar','Entrada gratis','Itaquera','Boa culinária'],
       id: 13
    },
 

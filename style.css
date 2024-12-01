@@ -118,3 +118,12 @@ section{
       flex-direction: column;
     }
   }
+
+#logo {
+    float: left;
+    margin-right: 10px; /* Ajustar o espaço entre a imagem e o próximo elemento */
+    width: 25vh;
+    height: 20vh;
+    text-align: left;
+    
+}
